@@ -1,14 +1,8 @@
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import './ToggleImage.css';
 
 export default function ToggleImage({ photo, showPhoto, handleChangePhoto }) {
-  // let description = photo.description;
-
-  // if (!showPhoto) {
-  //   <Card.Img  src={photo.url} style={{ width: '200px', height: '200px' }} />
-  // }
-
+  
   return (
     <>
       <Card.Text className='toggle-wrapper'>
