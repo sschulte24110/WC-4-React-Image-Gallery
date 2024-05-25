@@ -12,11 +12,13 @@ export default function ToggleImage({ photo, showPhoto, handleChangePhoto }) {
             className='image'
             src={photo.url}
             style={{ width: '200px', height: 'auto' }}
+            data-testid="toggle"
           />
         ) : (
           <Card.Text
             onClick={() => handleChangePhoto()}
             className='description'
+            data-testid = "description"
           >
             {photo.description}
           </Card.Text>

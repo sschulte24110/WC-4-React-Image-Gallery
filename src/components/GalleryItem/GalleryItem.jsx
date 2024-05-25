@@ -35,13 +35,13 @@ export default function GalleryItem ({photo, fetchGallery}) {
         <Button onClick={() => setShowDesc((prevState) => !prevState)}/>
 
       </Card.Text> */}
-      <ToggleImage showPhoto={showPhoto} handleChangePhoto={handleChangePhoto} photo={photo}/>
+      <ToggleImage showPhoto={showPhoto} handleChangePhoto={handleChangePhoto} photo={photo} data-testid="toggle" />
         {/* <Card.Text>{photo.description}</Card.Text> */}
       <Card.Body>
         <Card.Title>{photo.title}</Card.Title>
         <Card.Text>{photo.likes} Likes</Card.Text>
         <Card.Text>
-          <Button onClick={() => addLike(photo.id)} >👍🏼</Button>
+          <Button onClick={() => addLike(photo.id)} data-testid="like" >👍🏼</Button>
         </Card.Text>
       </Card.Body>
     </Card>
