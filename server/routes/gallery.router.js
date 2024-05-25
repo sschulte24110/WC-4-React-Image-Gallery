@@ -13,7 +13,7 @@ router.put('/like/:id', (req, res) => {
     })
     .catch((error) => {
       res.sendStatus(500);
-      console.log(`error resetting all items:`, error);
+      console.log(`error adding a like:`, error);
     });
 });
 

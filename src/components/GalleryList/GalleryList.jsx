@@ -11,7 +11,9 @@ export default function GalleryList ({ gallery, fetchGallery }) {
       <GalleryItem 
       key={photo.id}
       photo={photo}
+      gallery={gallery}
       fetchGallery={fetchGallery}
+      data-testid="galleryItem"
       />
     )}
     </>

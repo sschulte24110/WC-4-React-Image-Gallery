@@ -26,7 +26,7 @@ function App() {
         <header>
           <h1>React Gallery</h1>
         </header>
-        <GalleryList gallery={gallery} setGallery={setGallery} fetchGallery={fetchGallery}/>
+        <GalleryList gallery={gallery} setGallery={setGallery} fetchGallery={fetchGallery} data-testid="galleryList" />
         
         {/* <img src="images/goat_small.jpg"/>
         <img src="images/gus.jpg" alt="Gus"/> */}
