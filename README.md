@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a project learning to use React and CRUD to show that I have a handle on the different parts of the stack. I did that by creating a full-stack shopping list app.
+This is a project learning to use React and CRUD to show that I have a handle on the different parts of the stack. I did that by creating a full-stack photo gallery app.
 
 ## Requirements
 
@@ -44,7 +44,7 @@ React
 
 ## Acknowledgement
 
-Thanks to Emerging Digital Academy who equipped and helped us to make this application a reality.
+Thanks to Emerging Digital Academy who equipped and helped me to make this application a reality.
 
 ## Support
 
