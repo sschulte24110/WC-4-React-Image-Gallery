@@ -1,4 +1,5 @@
 import GalleryList from "../GalleryList/GalleryList";
+import GalleryForm from "../GalleryForm/GalleryForm";
 import Header from "../Header/Header";
 import React, { useState, useEffect } from 'react';
 // import Header from 'react-bootstrap';
@@ -29,7 +30,7 @@ function App() {
       <div>
         <Header />
         <Container data-testid="app">
-
+        <GalleryForm fetchGallery={fetchGallery} />
         <GalleryList gallery={gallery} setGallery={setGallery} fetchGallery={fetchGallery} data-testid="galleryList" />
         
         {/* <img src="images/goat_small.jpg"/>
