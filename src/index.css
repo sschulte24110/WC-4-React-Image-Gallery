@@ -1,5 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
+
+.banner-header {
+  background-color: #008cba;
+  padding: 20px; 
+}
+
+Button {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.Card.Body {
+  margin-top: 50px;
+}
+

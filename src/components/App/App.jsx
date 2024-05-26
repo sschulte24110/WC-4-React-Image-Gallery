@@ -1,8 +1,10 @@
 import GalleryList from "../GalleryList/GalleryList";
+import Header from "../Header/Header";
 import React, { useState, useEffect } from 'react';
 // import Header from 'react-bootstrap';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
@@ -25,10 +27,8 @@ function App() {
   
   return (
       <div>
-        <header>
-          <h1>React Gallery</h1>
-        </header>
-        <Container>
+        <Header />
+        <Container data-testid="app">
 
         <GalleryList gallery={gallery} setGallery={setGallery} fetchGallery={fetchGallery} data-testid="galleryList" />
         

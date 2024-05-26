@@ -2,3 +2,18 @@ img {
   height: 100px;
   width: 100px;
 }
+
+.photo-card {
+  width: 100px;
+  height: auto;
+}
+
+.card-body {
+  width: 110px;
+  height: auto;
+  margin: 5px;
+}
+
+Button {
+  cursor: pointer;
+}
