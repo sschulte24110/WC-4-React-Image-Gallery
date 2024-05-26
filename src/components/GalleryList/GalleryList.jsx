@@ -7,7 +7,7 @@ export default function GalleryList({ gallery, fetchGallery }) {
   console.log(`Gallery List`);
   return (
     <>
-      <Row xs='1' sm='2' md='3' lg='4'>
+      <Row xs='1' sm='2' md='3' >
         {gallery.map((photo) => (
           <GalleryItem
             key={photo.id}
