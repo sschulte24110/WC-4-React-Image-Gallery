@@ -27,6 +27,21 @@ export default function GalleryItem ({photo, fetchGallery}) {
   });
  }
  
+ const deletePhoto = (itemID) => {
+  if (confirm('Are you sure you want to delete this photo?') === false) {
+    return;
+  } 
+  axios({
+    method: 'DELETE', 
+    url: `/api/gallery/${itemID}`,
+  })
+    .then(() => {
+    fetchGallery();
+  })
+    .catch((error) => {
+      console.log(('error DELETing:', error));
+    })
+ }
  
   return (
   <Col>
@@ -36,7 +51,8 @@ export default function GalleryItem ({photo, fetchGallery}) {
         <Card.Title>{photo.title}</Card.Title>
         <Card.Text>{photo.likes} Likes</Card.Text>
         <Card.Text>
-          <Button variant='success' onClick={() => addLike(photo.id)} data-testid="like" >👍🏼</Button>
+          <Button variant='light' onClick={() => addLike(photo.id)} data-testid="like" >👍🏼</Button>
+          <Button variant='danger' onClick={() => deletePhoto(photo.id)}>Delete</Button>
         </Card.Text>
       </Card.Body>
     </Card>

@@ -49,4 +49,17 @@ router.post('/', (req, res) => {
     });
 });
 
+router.delete('/:photoid', (req, res) => {
+  const sqlText = `DELETE FROM gallery WHERE id=$1;`;
+  pool
+  .query(sqlText, [req.params.photoid])
+  .then((result) => {
+    console.log(`deleted photo from database`, result);
+    res.sendStatus(204);
+  }).catch((error) => {
+    console.log(`error making database DELETE`, error);
+    res.sendStatus(500);
+  })
+});
+
 module.exports = router;
