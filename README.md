@@ -6,28 +6,19 @@ This is a project learning to use React and CRUD to show that I have a handle on
 
 ## Requirements
 
-We want to store a list of items to buy in a database, so we can build up our list over a period of time and then go shopping.
+A database was created called react-gallery. A few images were added to the public/images folder. These were added via insert statement on Postico. Each item in the gallery provided a url, title, description and likes (defaults to 0).
 
-There should be a form at the top of the page where we can add new items to the list.
+The database was then used to build a gallery app using multiple components: App, Header, GalleryList, GalleryItem, ToggleItem, and GalleryForm.
 
-Each item can have a:
+GalleryList and GalleryItem were used to render the database onto the DOM via localhost.
 
-Name - text, allow up to 80 characters (required)
-Quantity - allow for decimal numbers (required)
-Unit - text, allow up to 20 characters (optional)
-When the page first loads, all the existing items should be displayed with the quantity & unit combined together for display. Each item should also have an option to remove it from the list or mark it as purchased. Once purchased, the buttons should be hidden and the item should show as "Purchased".
+ToggleItem was used with conditional rendering to be able to toggle between showing the image and description on click of either. 
 
-Items should initially appear alphabetically, but as items are marked purchased they should sort to the end of the list.
+A 'like' button was added that, when clicked, fires off a PUT request to add a 'like' to the talley, resulting in the number of 'likes' changing on the DOM.
 
-The Reset button should clear the purchased status from all items, allowing the list to be re-used. The Clear button should remove all items from the list, deleting them from the database.
+GalleryForm was added to allow a user to POST a new gallery item. 
 
-Add a confirmation dialog to the reset and clear button so that when the user clicks, they are prompted to confirm whether they really want to perform that action.
-
-Add indicators to the UI to show which fields are required. On Save, validate that all inputs have a value.
-
-On the client side, you can do this by making the HTML inputs required.
-However you should also do this on the server side and send back a friendly message if the required data is not provided.
-Optionally, make sure the text entered isn't too long.
+A DELETE route was also added with a button to allow the user the ability to delete gallery items. 
 
 ## Built With
 
