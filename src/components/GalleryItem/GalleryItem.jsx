@@ -48,7 +48,7 @@ export default function GalleryItem ({photo, fetchGallery}) {
     <Card className="photo-card" style={{ width: '250px', margin: '30px' }} key={photo.id}>
       <Card.Body>
       <ToggleImage showPhoto={showPhoto} handleChangePhoto={handleChangePhoto} photo={photo} data-testid="toggle" />
-        <Card.Title>{photo.title}</Card.Title>
+        <Card.Text>{photo.title}</Card.Text>
         <Card.Text>{photo.likes} Likes</Card.Text>
         <Card.Text>
           <Button variant='light' onClick={() => addLike(photo.id)} data-testid="like" >👍🏼</Button>
