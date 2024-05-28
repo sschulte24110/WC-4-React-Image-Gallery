@@ -1,13 +1,12 @@
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-// import ToggleImage from '../ToggleImage/ToggleImage';
+import ToggleImage from '../ToggleImage/ToggleImage';
 import './GalleryItem.css';
 import { useState } from 'react';
 import axios from 'axios';
 
 export default function GalleryItem ({photo, fetchGallery}) {
-  const [showPhoto, setShowPhoto] = useState(false);
 
   const addLike = (itemID) => {
   axios({
@@ -21,11 +20,6 @@ export default function GalleryItem ({photo, fetchGallery}) {
   })
  }
 
- const handleChangePhoto = () => {
-  setShowPhoto((description) => {
-    return !description;
-  });
- }
  
  const deletePhoto = (itemID) => {
   if (confirm('Are you sure you want to delete this photo?') === false) {
@@ -50,10 +44,7 @@ export default function GalleryItem ({photo, fetchGallery}) {
     // style={{ width: '130px', margin: '30px' }} 
     key={photo.id}>
       <Card.Body>
-        <Card.Text onClick={() => setShowPhoto(!showPhoto)} data-testid="toggle"> 
-          { showPhoto ? <Card.Text data-testid="description">{photo.description}</Card.Text> : <Card.Img src={photo.url}/>}
-        </Card.Text>
-      {/* <ToggleImage showPhoto={showPhoto} handleChangePhoto={handleChangePhoto} photo={photo} data-testid="toggle" /> */}
+      <ToggleImage photo={photo} data-testid="toggle" />
         <Card.Text>{photo.title}</Card.Text>
         <Card.Text>{photo.likes} Likes</Card.Text>
         <Card.Text>

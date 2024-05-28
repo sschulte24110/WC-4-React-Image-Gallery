@@ -1,15 +1,14 @@
-img {
-  height: 100px;
-  width: 100px;
+.image {
+  width: 300px;
 }
 
 .photo-card {
-  width: 130px;
+  width: 200px;
   height: auto;
 }
 
 .card-body {
-  width: 110px;
+  width: 190px;
   height: auto;
   margin: 5px;
 }

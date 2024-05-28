@@ -1,27 +1,23 @@
 import Card from 'react-bootstrap/Card';
 import './ToggleImage.css';
+import { useState } from 'react';
 
-export default function ToggleImage({ photo, showPhoto, handleChangePhoto }) {
+export default function ToggleImage({ photo }) {
+  const [showPhoto, setShowPhoto] = useState(false);
   
   return (
     <>
-      <Card.Text className='toggle-wrapper'>
+      <Card.Text
+        onClick={() => setShowPhoto(!showPhoto)}
+        data-testid='toggle'
+        className='image-wrapper'
+      >
         {showPhoto ? (
-          <Card.Img
-            onClick={() => handleChangePhoto()}
-            className='image'
-            src={photo.url}
-            style={{ width: '200px', height: 'auto' }}
-            data-testid="toggle"
-          />
-        ) : (
-          <Card.Text
-            onClick={() => handleChangePhoto()}
-            className='description'
-            data-testid = "description"
-          >
+          <Card.Text data-testid='description' className='description'>
             {photo.description}
           </Card.Text>
+        ) : (
+          <Card.Img src={photo.url} className='image' />
         )}
       </Card.Text>
     </>

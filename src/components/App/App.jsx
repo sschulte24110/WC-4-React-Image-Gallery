@@ -29,7 +29,7 @@ function App() {
   return (
       <div>
         <Header />
-        <Container data-testid="app">
+        <Container>
         <GalleryForm fetchGallery={fetchGallery} />
         <GalleryList gallery={gallery} setGallery={setGallery} fetchGallery={fetchGallery} data-testid="galleryList" />
         

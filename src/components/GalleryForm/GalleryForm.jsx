@@ -52,7 +52,7 @@ export default function GalleryForm( {fetchGallery} ) {
             <Form.Label>Description:</Form.Label>
             <Form.Control type='text' placeholder='Enter Description' value={newDescription} onChange={(event) => setNewDescription(event.target.value)} required />
           </Form.Group>
-          <Button variant='secondary' type='submit' >Submit</Button>
+          <Button variant='secondary' type='submit' className='form-button'>Submit</Button>
       </Form>
 
     </Container>
